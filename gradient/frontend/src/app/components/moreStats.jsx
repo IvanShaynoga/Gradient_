@@ -54,7 +54,7 @@ const MoreStats = ({ roles, skills, language, teatre }) => {
         <div className="info-div">
           <div className="drop-margin ">
             <button className="drop-btn dark" onClick={switchRoles}>
-              Роли в кино{" "}
+              Роли в кино и на ТВ
               {role === "hide" ? (
                 <VscTriangleDown className="arrow" />
               ) : (

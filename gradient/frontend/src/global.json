@@ -1,4 +1,5 @@
 {
-  "host": "http://gradientagency.ru",
-  "hostTest": "http://127.0.0.1:8000"
+  "host": "https://gradientagency.ru",
+  "hostTest": "http://127.0.0.1:8000",
+  "host_ip": "https://158.160.68.126"
 }

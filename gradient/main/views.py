@@ -12,6 +12,14 @@ def index(request):
     return render(request, 'index.html')
 
 
+def index_attr(request, id):
+    return render(request, 'index.html')
+
+
+def page_not_found(request, exception):
+    return render(request, 'index.html', {'path': request.path}, status=404)
+
+
 def download_zip(request, pk):
     actor = Actor.objects.get(pk=pk)
     if actor:

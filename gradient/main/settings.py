@@ -6,9 +6,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-(lbajm5h03hpne8t0o3wf182oe2gl476w)euu#njxwfm5c-!w#'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    'testserver',
+]
 
 
 INSTALLED_APPS = [
@@ -124,9 +129,14 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'frontend/build/static'
+# ]
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static'
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
