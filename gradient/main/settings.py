@@ -47,10 +47,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'main.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'frontend/build'],
+        'DIRS': [BASE_DIR / os.path.join('frontend', 'build'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +83,7 @@ else:
         'default': {
             'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
             'NAME': os.getenv('DB_NAME', default='gradient'),
-            'USER': os.getenv('POSTGRES_USER', default='sheshkere'),
+            'USER': os.getenv('POSTGRES_USER', default='postgres'),
             'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='sheshkere'),
             'HOST': os.getenv('DB_HOST', default='localhost'),
             'PORT': os.getenv('DB_PORT', default='5432')
