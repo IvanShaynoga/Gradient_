@@ -12,7 +12,7 @@ const ContactsPage = () => {
     >
       <img
         className="contact-img"
-        src="http://127.0.0.1:8000/media/front/image.png"
+        src="/media/front/image.png"
         alt=""
       />
       <div className="div-contants">
@@ -25,7 +25,7 @@ const ContactsPage = () => {
         </div>
         <div className="contants div-tg">
           <a href="https://t.me/tg_ggrom" target="blank">
-            telegram @tg_ggrom
+            telegram: @tg_ggrom
           </a>
         </div>
       </div>

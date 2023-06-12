@@ -12,12 +12,24 @@ import { ThreeDots } from "react-loader-spinner";
 
 const OneActorPage = () => {
   const [actor, setActor] = useState();
+  const [id, setId] = useState();
   const [images, setImages] = useState(null);
   const [loader, setLoader] = useState(false);
-  // const [modalActive, setModalActive] = useState(false);
-  const { id } = useParams();
+  // const [modalActive, setModalActive] = useState(true);
+  const { actorUrl } = useParams();
 
-  async function fetchActor() {
+  async function fetchActorsList() {
+    const a = await PostService.getAllActors();
+    for (let i in a) {
+      if (a[i].url === actorUrl) {
+        fetchActor(a[i].id);
+        setId(a[i].id);
+        break;
+      }
+    }
+  }
+
+  async function fetchActor(id) {
     try {
       const a = await PostService.getById(id);
       setActor(a);
@@ -32,7 +44,7 @@ const OneActorPage = () => {
   }
 
   useEffect(() => {
-    fetchActor();
+    fetchActorsList();
   }, []);
 
   useEffect(() => {
@@ -40,7 +52,10 @@ const OneActorPage = () => {
       setImages(actor.images);
     }
   }, [actor]);
-  // console.log(images);
+
+  async function donloadZip() {
+    await PostService.getImagesZip(id, actor.last_name);
+  }
 
   return (
     <>
@@ -71,8 +86,14 @@ const OneActorPage = () => {
               roles={actor.roles}
               skills={actor.skills}
               language={actor.language}
+              teatre={actor.roles_teatre}
             />
           </div>
+
+          <button className="download-btn dark" onClick={donloadZip}>
+            Загрузить все фото
+          </button>
+
           {images ? (
             <div className="main-img-container">
               {/* <Modal active={modalActive} setActive={setModalActive}> */}

@@ -12,6 +12,14 @@ def index(request):
     return render(request, 'index.html')
 
 
+def index_attr(request, id):
+    return render(request, 'index.html')
+
+
+def page_not_found(request, exception):
+    return render(request, 'index.html', {'path': request.path}, status=404)
+
+
 def download_zip(request, pk):
     actor = Actor.objects.get(pk=pk)
     if actor:
@@ -22,7 +30,7 @@ def download_zip(request, pk):
             x = str(image.images).replace('/', os.sep)
             with open(f'{settings.BASE_DIR}\media\{x}', 'rb') as image_file:
                 f = image_file.read()
-                zf.writestr(f'{image.last_name}.png', f)
+                zf.writestr(f'{image.last_name}_{image.id}.png', f)
 
         response['Content-Disposition'] = f'attachment; filename={Actor.last_name}.zip'
         return response

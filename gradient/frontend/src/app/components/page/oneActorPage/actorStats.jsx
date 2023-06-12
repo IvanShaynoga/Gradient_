@@ -2,16 +2,25 @@ import React from "react";
 
 const ActorStats = ({ actor }) => {
   const stats = {
-    Возраст: "age",
-    Рост: "height",
-    Телосложение: "body",
-    "Цвет волос": "hair_col",
-    "Цвет глаз": "eyes_col",
+    "Возраст:": "age",
+    "Город:": "town",
+    "Рост:": "height",
+    "Телосложение:": "body",
+    "Цвет волос:": "hair_col",
+    "Длина волос:": "hair_long",
+    "Цвет глаз:": "eyes_col",
+    "Тип внешности:": "person",
+    "Размер одежды:": "dress",
+    "Размер обуви:": "shoe",
+    "Мерки:": "measurement",
   };
 
   function getStatList() {
     let statList = [];
     for (let i in stats) {
+      if (i === "Рост:" && String(actor[stats[i]]).indexOf("см") === -1) {
+        actor[stats[i]] = `${actor[stats[i]]} см`;
+        }
       statList.push(
         <div key={i} className="stats-item">
           {i} {actor[stats[i]]}
