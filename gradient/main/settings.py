@@ -82,7 +82,7 @@ else:
         'default': {
             'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
             'NAME': os.getenv('DB_NAME', default='gradient'),
-            'USER': os.getenv('POSTGRES_USER', default='postgres'),
+            'USER': os.getenv('POSTGRES_USER', default='sheshkere'),
             'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='sheshkere'),
             'HOST': os.getenv('DB_HOST', default='localhost'),
             'PORT': os.getenv('DB_PORT', default='5432')
