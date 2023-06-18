@@ -27,10 +27,10 @@ def download_zip(request, pk):
         zf = zipfile.ZipFile(response, 'w')
         images = actor.images.all()
         for image in images:
-            x = str(image.images).replace('/', os.sep)
-            with open(f'{settings.BASE_DIR}\media\{x}', 'rb') as image_file:
+            x = str(image.images) #replace('/', os.sep)
+            with open(f'{settings.BASE_DIR}/media/{x}', 'rb') as image_file:
                 f = image_file.read()
                 zf.writestr(f'{image.last_name}_{image.id}.png', f)
 
         response['Content-Disposition'] = f'attachment; filename={Actor.last_name}.zip'
-        return response
+        return response 

@@ -141,4 +141,4 @@ mig.ps1
 gradient/sqldiff.exe
 gradient/sqlite3_analyzer.exe
 gradient/sqlite3.exe
-
+gradient/static

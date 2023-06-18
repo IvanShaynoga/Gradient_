@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment} from "react";
 import ActorBox from "../../boxForList";
 import PostService from "../../../API/PostService";
 import { ThreeDots } from "react-loader-spinner";
@@ -36,7 +36,7 @@ const HomePage = () => {
             return (
               <div className="actor-kase" key={index}>
                 {a.map((aa) => {
-                  return <>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</>;
+                  return <Fragment key={aa.id}>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</Fragment>;
                 })}
               </div>
             );

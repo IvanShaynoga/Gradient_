@@ -1,7 +1,7 @@
 import axios from "axios";
 import dataJson from "../../global.json";
 
-const host = dataJson.host;
+const host = dataJson.hostTest;
 
 const PostService = {
   getAllActors: async () => {
