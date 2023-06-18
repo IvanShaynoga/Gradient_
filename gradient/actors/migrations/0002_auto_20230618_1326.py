@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='actor',
             name='pub_date',
-            field=models.IntegerField(default=100, unique=True, verbose_name='Индекс сортировки'),
+            field=models.IntegerField(null=True ,unique=True, verbose_name='Индекс сортировки'),
             preserve_default=False,
         ),
     ]
