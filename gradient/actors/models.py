@@ -35,8 +35,8 @@ class Actor(models.Model):
     )
     url = models.SlugField(max_length=255, unique=True, db_index=True,
                            verbose_name='URL')
-    pub_date = models.IntegerField(verbose_name='Индекс сортировки'
-                                   )
+    pub_date = models.IntegerField(verbose_name='Индекс сортировки',
+                                   unique=True)
     male = models.TextField(max_length=1, verbose_name='Пол',
                             choices=SexSelector.choices)
     age = models.IntegerField(verbose_name='Возраст')
