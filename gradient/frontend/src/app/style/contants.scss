@@ -54,3 +54,14 @@
     display: block;
   }
 }
+@media (max-width: 499px) {
+  .contants {
+    letter-spacing: 2px;
+    font-size: 22px;
+  }
+  .div-tg {
+    width: 190px;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+  }
+}
