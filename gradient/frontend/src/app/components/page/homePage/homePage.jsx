@@ -1,11 +1,11 @@
-import React, { useEffect, useState, Fragment} from "react";
+import React, { useEffect, useState } from "react";
 import ActorBox from "../../boxForList";
 import PostService from "../../../API/PostService";
 import { ThreeDots } from "react-loader-spinner";
 import { motion } from "framer-motion";
-import { listSort } from "../../utils/sort";
-import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+
+import "../../../style/page.scss";
+import { validator } from "../../utils/validator";
 
 const HomePage = () => {
   const [actors, setActors] = useState();
@@ -15,9 +15,16 @@ const HomePage = () => {
     fetchActors();
   }, []);
 
+  function listVal(l) {
+    for (let i in l) {
+      l[i]["agetype"] = validator(l[i].age);
+    }
+    return l;
+  }
+
   async function fetchActors() {
     const a = await PostService.getAllActors();
-    setActors(listSort(a));
+    setActors(listVal(a));
     setTimeout(() => {
       setLoader(true);
     }, 1000);
@@ -32,15 +39,13 @@ const HomePage = () => {
     >
       {actors ? (
         <div className="foto-boxes">
-          {actors.map((a, index) => {
-            return (
-              <div className="actor-kase" key={index}>
-                {a.map((aa) => {
-                  return <Fragment key={aa.id}>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</Fragment>;
-                })}
-              </div>
-            );
-          })}
+          <div className="actor-kase">
+            {actors.map((aa) => {
+              return (
+                <>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</>
+              );
+            })}
+          </div>
         </div>
       ) : (
         <>

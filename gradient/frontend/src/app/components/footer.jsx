@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <img
         className="img-footer footer-box"
-        src="/media/front/m.png"
+        src="http://127.0.0.1:8000/media/front/m.png"
         alt="error img"
       />
       <div className="info-footer footer-box ">

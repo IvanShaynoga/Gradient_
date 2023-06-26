@@ -13,6 +13,7 @@
   display: flex;
   margin: 40px 170px 40px 100px;
   height: 537px;
+  transition: 0.3s;
 }
 
 .stats-andName {
@@ -24,9 +25,10 @@
 }
 
 .actor-name {
+  text-align: center;
   margin-bottom: 50px;
   font-size: 50px;
-  width: 500px;
+  max-width: 500px;
 }
 
 .stats-params {
@@ -34,6 +36,7 @@
 }
 .player {
   margin: 0 0 0 100px;
+  transition: 0.3s;
 }
 
 .info-div {
@@ -42,14 +45,9 @@
 
 .drop-btn {
   font-family: "Alumni Sans Pinstripe", sans-serif;
-  // background: rgb(0, 255, 26);
-  // border: 1px solid white;
   font-size: 45px;
   font-weight: bold;
   letter-spacing: 1px;
-  // width: 100%;
-  // position: relative;
-  // left: 95px;
   border-radius: 14px;
   padding: 2px 1px 2px 8px;
   box-sizing: border-box;
@@ -72,10 +70,10 @@
   vertical-align: middle;
   position: relative;
   text-align: left;
-  line-height: 50px;
-  // left: 100px;
+  line-height: 30px;
   font-size: 25px;
   letter-spacing: 2px;
+  line-height: 50px;
 
   &.hide {
     opacity: 0;
@@ -90,7 +88,6 @@
   }
 }
 .drop-margin {
-  // text-align: left;
   margin-bottom: 30px;
 }
 .drop-end {
@@ -114,19 +111,74 @@
 
 .download-btn {
   font-family: "Alumni Sans Pinstripe", sans-serif;
-  // display: flex;
   margin-left: 790px;
-  // text-align: right;
-  // justify-content: right;
   padding: 10px;
   font-size: 35px;
   font-weight: 1000;
   letter-spacing: 1px;
-  // color: bisque;
   transition: 0.3s;
 }
 
 .download-btn:hover {
   transition: 0.3s;
   color: white;
+}
+
+@media (max-width: 950px) {
+  .main-photo {
+    margin: 40px 50px 40px 50px;
+    transition: 0.3s;
+  }
+  .download-btn {
+    margin-left: 0px;
+  }
+  .player {
+    margin: 0 0 0 50px;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 750px) {
+  .first-container {
+    display: block;
+
+    justify-content: center;
+  }
+
+  .main-photo {
+    margin: 0 auto 25px auto;
+    display: block;
+  }
+  .player {
+    margin: 0 auto;
+    display: block;
+  }
+  .stats-andName {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .actor-name {
+    text-align: center;
+    margin: 25px auto;
+  }
+  .h2-mini {
+    text-align: center;
+  }
+  .stats-params {
+    margin: 0 auto 50px 10px;
+  }
+  .education {
+    margin: 0 auto 50px 10px;
+  }
+}
+@media (max-width: 400px) {
+  .actor-name {
+    font-size: 40px;
+  }
+
+  .drop-contet {
+    left: 5px;
+    font-size: 20px;
+  }
 }

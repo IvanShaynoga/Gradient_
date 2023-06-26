@@ -2,12 +2,10 @@
   position: relative;
   margin: 0;
   padding: 0;
+  // background-color: aqua;
   top: 465px;
   left: 60px;
   font-size: 36px;
-  // -webkit-text-stroke: 0.33px #ffffff;
-  // -webkit-text-stroke: 1px;
-  // -webkit-text-stroke-color: black;
   letter-spacing: 2px;
   // transition: 0.3s;
   text-align: left;
@@ -24,8 +22,8 @@
   height: 540px;
   width: 360px;
   border-radius: 2px;
-
-  margin: 40px;
+  background-size: cover;
+  margin: 20px;
   filter: grayscale(1);
   transition: 0.3s;
 }
@@ -36,7 +34,6 @@
     line-height: 50px;
     transition: 0.3s;
     opacity: 1;
-    // text-shadow: 3px #000000;
     text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(0, 0, 0),
       0 0 0.2em rgb(0, 0, 0);
   }
@@ -50,4 +47,39 @@
 
 .container-actor {
   width: 100px;
+}
+
+@media (max-width: 1000px) {
+  .name-box {
+    top: 390px;
+    line-height: 50px;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(0, 0, 0),
+      0 0 0.2em rgb(0, 0, 0);
+  }
+  .box-photo {
+    filter: grayscale(0);
+  }
+}
+
+@media (max-width: 499px) {
+  .box-photo {
+    height: 470px;
+    width: 300px;
+  }
+  .name-box {
+    // background-color: aqua;
+    top: 340px;
+    max-width: 240px;
+  }
+  .box-photo:hover {
+    .name-box {
+      top: 340px;
+      line-height: 50px;
+      transition: 0.3s;
+      opacity: 1;
+      text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(0, 0, 0),
+        0 0 0.2em rgb(0, 0, 0);
+    }
+  }
 }

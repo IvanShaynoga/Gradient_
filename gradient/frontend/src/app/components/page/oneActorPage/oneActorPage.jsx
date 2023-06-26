@@ -69,14 +69,14 @@ const OneActorPage = () => {
                   src={actor.main_image}
                   alt="error img"
                 />
-                <div className="player">
-                  <ReactPlayer
-                    height={200}
-                    width={360}
-                    controls={true}
-                    url={actor.video}
-                  />
-                </div>
+
+                <ReactPlayer
+                  className="player"
+                  height={200}
+                  width={360}
+                  controls={true}
+                  url={actor.video}
+                />
               </div>
 
               <ActorStats actor={actor} />

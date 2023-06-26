@@ -15,3 +15,25 @@
   transition: 0.3s;
   color: rgb(250, 250, 250);
 }
+
+@media (max-width: 1200px) {
+  .li-nav {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  .li-nav {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 740px) {
+  .li-nav {
+    display: block;
+    margin: 10px 5px;
+  }
+  .main-nav {
+    padding-bottom: 0;
+  }
+}

@@ -13,7 +13,9 @@
 }
 .logo {
   height: 110px;
+  transition: 0.3s;
 }
+
 .info {
   position: absolute;
   // display: flex;
@@ -24,8 +26,29 @@
   font-size: 24px;
   letter-spacing: 1.5px;
   line-height: 12px;
+}
 
-  @media (max-width: 784px) {
+@media (max-width: 1155px) {
+  .logo {
+    height: 90px;
+  }
+  .info {
+    font-size: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .info {
     position: static;
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .logo {
+    height: 80px;
+  }
+}
+@media (max-width: 499px) {
+  .logo {
+    height: 65px;
   }
 }

@@ -12,13 +12,12 @@ const ContactsPage = () => {
     >
       <img
         className="contact-img"
-        src="/media/front/image.png"
+        src="http://127.0.0.1:8000/media/front/image.png"
         alt=""
       />
       <div className="div-contants">
         <h2 className="contants div-name">Григорий Громовик</h2>
 
-        {/* <div className="contants div-name">Григорий Громовик</div> */}
         <div className="contants div-email">Почта: info@gradientagency.ru</div>
         <div className="contants div-phone">
           Телефон/WhatsApp: +7 (962) 902 19 19
