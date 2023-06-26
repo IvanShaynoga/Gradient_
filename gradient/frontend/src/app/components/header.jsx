@@ -6,7 +6,7 @@ const Header = () => {
     <div className="header">
       <img
         className="box logo"
-        src="http://127.0.0.1:8000/media/front/444.png"
+        src="/media/front/444.png"
         alt="img logo errors"
       />
       <div className="box info">
