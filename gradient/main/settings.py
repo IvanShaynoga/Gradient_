@@ -14,7 +14,7 @@ ALLOWED_HOSTS = [
     '[::1]',
     'testserver',
     '158.160.6.222',
-    'gradientagency.hopto.org'
+    'gradientagency.myftp.org'
 ]
 
 
@@ -152,6 +152,6 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://158.160.6.222",
     "http://158.160.6.222:8000",
-    "http://gradientagency.hopto.org",
-    "https://gradientagency.hopto.org"
+    "http://gradientagency.myftp.org",
+    "https://gradientagency.myftp.org"
 ]
