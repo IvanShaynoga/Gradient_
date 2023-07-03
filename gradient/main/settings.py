@@ -13,7 +13,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '[::1]',
     'testserver',
-    '158.160.68.126',
+    '158.160.6.222',
     'gradientagency.hopto.org'
 ]
 
@@ -150,8 +150,8 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
     "http://127.0.0.1:8000",
     "http://localhost:3000",
-    "http://158.160.68.126",
-    "http://158.160.68.126:8000",
+    "http://158.160.6.222",
+    "http://158.160.6.222:8000",
     "http://gradientagency.hopto.org",
     "https://gradientagency.hopto.org"
 ]
