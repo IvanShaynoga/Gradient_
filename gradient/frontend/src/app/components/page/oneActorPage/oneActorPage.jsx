@@ -45,6 +45,9 @@ const OneActorPage = () => {
 
   useEffect(() => {
     fetchActorsList();
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 300);
   }, []);
 
   useEffect(() => {
