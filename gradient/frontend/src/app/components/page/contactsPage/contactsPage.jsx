@@ -12,7 +12,7 @@ const ContactsPage = () => {
     >
       <img
         className="contact-img"
-        src="/media/front/contact.png"
+        src="/media/front/contacts1.png"
         alt=""
       />
       <div className="div-contants">

@@ -12,12 +12,17 @@
   max-width: 300px;
   opacity: 0;
   text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(0, 0, 0),
-  0 0 0.2em rgb(0, 0, 0);
+    0 0 0.2em rgb(0, 0, 0);
 }
 
 .name-age {
   font-size: 22px;
 }
+// .foto-boxes {
+//   // margin: 100px;
+//   // background-color: aqua;
+//   margin: ;
+// }
 
 .box-photo {
   background-size: contain;
@@ -25,9 +30,13 @@
   width: 360px;
   border-radius: 2px;
   background-size: cover;
-  margin: 20px;
+
+  // padding: 20px;
   filter: grayscale(1);
   transition: 0.3s;
+}
+.box-margin {
+  margin: 20px;
 }
 @media (min-width: 1000px) {
   .box-photo:hover {
@@ -70,6 +79,10 @@
     // background-color: aqua;
     top: 330px;
     max-width: 295px;
-    left: 5px;
+    left: 15px;
+    font-size: 20px;
+  }
+  .name-age {
+    font-size: 12px;
   }
 }
