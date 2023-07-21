@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="main-nav">
       <ul>
         <li className="li-nav">
-          <Link to="">Актеры агенства</Link>
+          <Link to="">Актеры агентства</Link>
         </li>
         <li className="li-nav">
           <Link to="actors">Мужчины</Link>
